@@ -1,11 +1,13 @@
-﻿
-namespace AddTwoNumbers
+﻿namespace AddTwoNumbers
 {
     public class ListNode
     {
-        public int val;
         public ListNode next;
-        public ListNode(int x) { val = x; }
+        public int val;
+        public ListNode(int x)
+        {
+            val = x;
+        }
     }
 
     public class Solution
@@ -20,7 +22,6 @@ namespace AddTwoNumbers
 
             do
             {
-
                 int val1 = (next1 == null ? 0 : next1.val);
                 int val2 = (next2 == null ? 0 : next2.val);
 
@@ -34,7 +35,6 @@ namespace AddTwoNumbers
                     sum = val1 + val2;
                 }
 
-
                 if (sum >= 10)
                 {
                     currentNode.val += (sum - 10);
@@ -46,8 +46,6 @@ namespace AddTwoNumbers
                     sum10 = false;
                 }
 
-
-
                 if (next1 == null && next2 == null)
                 {
                     if (sum10 == false)
@@ -58,7 +56,6 @@ namespace AddTwoNumbers
                     {
                         currentNode.next = new ListNode(0);
                     }
-
                 }
                 if (next1 != null && next2 == null)
                 {
@@ -70,7 +67,6 @@ namespace AddTwoNumbers
                     {
                         currentNode.next = new ListNode(0);
                     }
-
                 }
                 if (next1 == null && next2 != null)
                 {
@@ -82,7 +78,6 @@ namespace AddTwoNumbers
                     {
                         currentNode.next = new ListNode(0);
                     }
-
                 }
                 if (next1 != null && next2 != null)
                 {
@@ -94,14 +89,7 @@ namespace AddTwoNumbers
                     {
                         currentNode.next = new ListNode(0);
                     }
-
                 }
-
-
-
-
-
-
 
                 currentNode = currentNode.next;
                 if (next1 != null)
@@ -121,14 +109,8 @@ namespace AddTwoNumbers
                 {
                     next2 = null;
                 }
-
-
-
-
             } while (currentNode != null || (sum10 == true));
             return resultNode;
-
-
         }
     }
 }

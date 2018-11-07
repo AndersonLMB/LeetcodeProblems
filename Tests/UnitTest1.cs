@@ -1,5 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AddTwoNumbers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
@@ -37,8 +37,8 @@ namespace Tests
             Assert.AreEqual(result.next.val, 0);
             Assert.AreEqual(result.next.next.val, 8);
             Assert.AreEqual(result.next.next.next, null);
-
         }
+
         [TestMethod]
         public void TestMethod2()
         {
@@ -59,10 +59,8 @@ namespace Tests
 
             Assert.AreEqual(result.val, 0);
             Assert.AreEqual(result.next.val, 0);
-            Assert.AreEqual(result.next.next.val,1);
+            Assert.AreEqual(result.next.next.val, 1);
             Assert.AreEqual(result.next.next.next, null);
-
         }
     }
 }
-
