@@ -42,6 +42,7 @@ namespace Tests
         [TestMethod]
         public void TestMethod2()
         {
+
             //[1]
             //[9,9]
             var result = AddTwoNumbers.Solution.AddTwoNumbers(
